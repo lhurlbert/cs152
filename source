@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ 
+void main()
+{
+    double lbs, in, ft, bmi;
+ 
+    printf("Enter weight in pounds:");
+    scanf("%lf\n",&lbs);
+    printf("Enter height in inches:");
+    scanf("%lf\n", &in);
+ 
+    ft = (in / 12);
+ 
+    bmi = ((lbs * 4.88) / (ft * ft));
+ 
+    printf("%lf\n", &bmi);
+ 
+    if (isless(&bmi, 20))
+    {
+        printf("underweight");
+    }
+    else if (isgreaterequal(&bmi, 20) && isless(&bmi, 25))
+    {
+        printf("normal");
+    }
+    else if (isgreaterequal(&bmi, 25) && isless(&bmi, 30))
+    {
+        printf("slightly overweight");
+    }
+    else if (isgreaterequal(&bmi, 30) && isless(&bmi, 40))
+    {
+        printf("overweight");
+    }
+    else
+    {
+        printf("extremely overweight");
+    }
+ 
+}
