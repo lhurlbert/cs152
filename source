@@ -1,41 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 int main()
 {
 
 	double lbs, inches, ft, bmi;
 
+	printf("%lf\n", &lbs);
 	printf("Enter weight in pounds:");
-	scanf("%lf\n", lbs);
+	scanf("%lf", &lbs);
 	printf("%lf\n", lbs);
 
 	printf("Enter height in inches:");
-	scanf("%lf\n", inches);
+	scanf("%lf", &inches);
 	printf("%lf\n", inches);
 
-	system("pause");
-
 	ft = (inches / 12);
+	printf("%lf\n", ft);
+	
 
 	bmi = ((lbs * 4.88) / (ft * ft));
 
-	printf("%lf\n", &bmi);
+	printf("%lf\n", bmi);
 
-	if ((bmi<20))
+	if ((&bmi < (double*)20))
 	{
 		printf("underweight");
 	}
-	else if ((bmi >= 20) && (bmi<25))
+	else if ((&bmi >= (double*)20) && (&bmi < (double*)25))
 	{
 		printf("normal");
 	}
-	else if ((bmi >= 25) && (bmi<30))
+	else if ((&bmi >= (double*)25) && (&bmi < (double*)30))
 	{
 		printf("slightly overweight");
 	}
-	else if ((bmi >= 30) && (bmi<40))
+	else if ((&bmi >= (double*)30) && (&bmi < (double*)40))
 	{
 		printf("overweight");
 	}
